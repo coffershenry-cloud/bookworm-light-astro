@@ -2,24 +2,19 @@
 
 
 ---
-import Posts from "@/components/Posts.astro";
-import config from "@/config/config.json";
-import Base from "@/layouts/Base.astro";
-import Pagination from "@/layouts/components/Pagination.astro";
-import { getSinglePage } from "@/lib/contentParser.astro";
-import { sortByDate } from "@/lib/utils/sortFunctions";
-
-const posts = await getSinglePage("posts");
-const sortedPosts = sortByDate(posts);
-const totalPages = Math.ceil(posts.length / config.settings.pagination);
-const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
 
-<Base>
-  <section class="section">
-    <div class="container">
-      <Posts posts={currentPosts} className="mb-16" />
-      <Pagination currentPage={1} totalPages={totalPages} />
-    </div>
-  </section>
-</Base>
+<a
+  href="/"
+  class="navbar-brand flex items-center gap-3"
+  aria-label="InkGlobe home"
+>
+  <img
+    src="/images/inkglobe-logo-mark.png"
+    alt=""
+    width="48"
+    height="48"
+    class="h-12 w-12 object-contain"
+  />
+  <span class="text-3xl font-extrabold tracking-tight text-dark">InkGlobe</span>
+</a>
