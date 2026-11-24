@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "InkGlobe | Finance, Insurance and Software",
-    "base_url": "https://inkglobe.com",
+    "base_url": "https://www.inkglobe.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",

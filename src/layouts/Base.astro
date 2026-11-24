@@ -9,12 +9,10 @@ import "@/styles/main.css";
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 
-// font families - extract font names for Font component (filter out type keys)
 const fontEntries = Object.entries(theme.fonts.font_family).filter(
   ([key]) => !key.includes("_type"),
 );
 
-// types for frontmatters
 export interface Props {
   title?: string;
   meta_title?: string;
@@ -24,17 +22,17 @@ export interface Props {
   canonical?: string;
 }
 
-// distructure frontmatters
 const { title, meta_title, description, image, noindex, canonical } =
   Astro.props;
+
+const canonicalUrl =
+  canonical ?? new URL(Astro.url.pathname, config.site.base_url).toString();
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
-    <!-- theme meta -->
     <meta name="theme-name" content="bookworm-light-astro" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
@@ -50,7 +48,6 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta name="generator" content={Astro.generator} />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <!-- google font css - Astro 6 built-in Font API -->
     {
       fontEntries.map(([key]) => {
         const cssVar = `--font-${key}` as any;
@@ -58,24 +55,19 @@ const { title, meta_title, description, image, noindex, canonical } =
       })
     }
 
-    <!-- responsive meta -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=5"
     />
 
-    <!-- title -->
     <title>
       {plainify(meta_title ? meta_title : title ? title : config.site.title)}
     </title>
 
-    <!-- canonical url -->
-    {canonical && <link rel="canonical" href={canonical} item-prop="url" />}
+    <link rel="canonical" href={canonicalUrl} />
 
-    <!-- noindex robots -->
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
-    <!-- meta-description -->
     <meta
       name="description"
       content={plainify(
@@ -85,10 +77,8 @@ const { title, meta_title, description, image, noindex, canonical } =
 
     <ClientRouter />
 
-    <!-- author from config.json -->
     <meta name="author" content={config.metadata.meta_author} />
 
-    <!-- og-title -->
     <meta
       property="og:title"
       content={plainify(
@@ -96,20 +86,16 @@ const { title, meta_title, description, image, noindex, canonical } =
       )}
     />
 
-    <!-- og-description -->
     <meta
       property="og:description"
       content={plainify(
         description ? description : config.metadata.meta_description,
       )}
     />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
-    />
 
-    <!-- twitter-title -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+
     <meta
       name="twitter:title"
       content={plainify(
@@ -117,7 +103,6 @@ const { title, meta_title, description, image, noindex, canonical } =
       )}
     />
 
-    <!-- twitter-description -->
     <meta
       name="twitter:description"
       content={plainify(
@@ -125,7 +110,6 @@ const { title, meta_title, description, image, noindex, canonical } =
       )}
     />
 
-    <!-- og-image -->
     <meta
       property="og:image"
       content={`${config.site.base_url}${
@@ -133,15 +117,16 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
 
-    <!-- twitter-image -->
     <meta
       name="twitter:image"
       content={`${config.site.base_url}${
         image ? image : config.metadata.meta_image
       }`}
     />
+
     <meta name="twitter:card" content="summary_large_image" />
   </head>
+
   <body>
     <TwSizeIndicator />
     <Header />
