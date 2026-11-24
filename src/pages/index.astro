@@ -10,31 +10,97 @@ const currentPosts = sortedPosts.slice(0, 100);
 ---
 
 <Base>
-  <section class="section pt-8 pb-5">
+  <section class="section inkglobe-intro">
     <div class="inkglobe-wide">
-      <h1 class="text-center text-2xl font-extrabold leading-tight text-dark md:text-3xl">
+      <h1>
         Made for Small Businesses
       </h1>
     </div>
   </section>
 
-  <section class="section pt-4">
+  <section class="section inkglobe-guides">
     <div class="inkglobe-wide">
-      <h2 class="mb-8 text-left text-xl font-bold md:text-2xl">
-        Latest Small Business Guides
-      </h2>
+      <h2>Latest Guides</h2>
       <Posts posts={currentPosts} className="mb-16" />
     </div>
   </section>
 </Base>
 
 <style is:global>
+  /* One consistent editorial width across the website */
+  .container,
+  .navbar,
   .inkglobe-wide {
-    width: 100%;
-    max-width: none;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: clamp(16px, 2.5vw, 40px);
-    padding-right: clamp(16px, 2.5vw, 40px);
+    width: 100% !important;
+    max-width: 1240px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: clamp(20px, 4vw, 52px) !important;
+    padding-right: clamp(20px, 4vw, 52px) !important;
+  }
+
+  /* Keep navigation aligned with the page content */
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .navbar-nav {
+    gap: 2px;
+  }
+
+  .navbar .nav-link {
+    padding: 10px 9px !important;
+    font-size: 15px !important;
+    white-space: nowrap;
+  }
+
+  /* Homepage headline */
+  .inkglobe-intro {
+    padding-top: 42px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .inkglobe-intro h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(36px, 4.5vw, 52px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  /* Latest guides heading */
+  .inkglobe-guides {
+    padding-top: 20px !important;
+  }
+
+  .inkglobe-guides h2 {
+    margin-bottom: 32px;
+    text-align: left;
+    font-size: clamp(23px, 2.4vw, 29px);
+    font-weight: 700;
+  }
+
+  /* Images remain completely static on hover */
+  img,
+  a img,
+  .group:hover img,
+  a:hover img {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  @media (max-width: 767px) {
+    .navbar {
+      flex-wrap: wrap;
+    }
+
+    .navbar .nav-link {
+      white-space: normal;
+    }
+
+    .inkglobe-intro {
+      padding-top: 30px !important;
+    }
   }
 </style>
