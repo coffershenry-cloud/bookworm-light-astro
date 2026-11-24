@@ -1,20 +1,27 @@
-
-
-
 ---
+import Posts from "@/components/Posts.astro";
+import Base from "@/layouts/Base.astro";
+import { getSinglePage } from "@/lib/contentParser.astro";
+import { sortByDate } from "@/lib/utils/sortFunctions";
+
+const posts = await getSinglePage("posts");
+const sortedPosts = sortByDate(posts);
+const currentPosts = sortedPosts.slice(0, 100);
 ---
 
-<a
-  href="/"
-  class="navbar-brand flex items-center gap-3"
-  aria-label="InkGlobe home"
->
-  <img
-    src="/images/inkglobe-logo-mark.png"
-    alt=""
-    width="48"
-    height="48"
-    class="h-12 w-12 object-contain"
-  />
-  <span class="text-3xl font-extrabold tracking-tight text-dark">InkGlobe</span>
-</a>
+<Base>
+  <section class="section pt-8 pb-4">
+    <div class="container">
+      <h1 class="text-center text-4xl font-extrabold leading-tight text-dark md:text-5xl">
+        Made for Small Businesses
+      </h1>
+    </div>
+  </section>
+
+  <section class="section pt-4">
+    <div class="container">
+      <h2 class="mb-10">Latest Small Business Guides</h2>
+      <Posts posts={currentPosts} className="mb-16" />
+    </div>
+  </section>
+</Base>
