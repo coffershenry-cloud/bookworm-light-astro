@@ -10,18 +10,31 @@ const currentPosts = sortedPosts.slice(0, 100);
 ---
 
 <Base>
-  <section class="section pt-8 pb-4">
-    <div class="container">
-      <h1 class="text-center text-4xl font-extrabold leading-tight text-dark md:text-5xl">
+  <section class="section pt-8 pb-5">
+    <div class="inkglobe-wide">
+      <h1 class="text-center text-2xl font-extrabold leading-tight text-dark md:text-3xl">
         Made for Small Businesses
       </h1>
     </div>
   </section>
 
   <section class="section pt-4">
-    <div class="container">
-      <h2 class="mb-10">Latest Small Business Guides</h2>
+    <div class="inkglobe-wide">
+      <h2 class="mb-8 text-left text-xl font-bold md:text-2xl">
+        Latest Small Business Guides
+      </h2>
       <Posts posts={currentPosts} className="mb-16" />
     </div>
   </section>
 </Base>
+
+<style is:global>
+  .inkglobe-wide {
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(16px, 2.5vw, 40px);
+    padding-right: clamp(16px, 2.5vw, 40px);
+  }
+</style>
