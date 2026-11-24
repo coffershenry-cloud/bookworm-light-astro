@@ -1,24 +1,193 @@
-/* InkGlobe responsive article content */
-.content img {
+/* InkGlobe article content styling */
+
+.content {
+  width: 100%;
   max-width: 100%;
-  height: auto;
+  color: #4b5563;
+  font-size: 17px;
+  line-height: 1.85;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
+/* Paragraphs and text alignment */
+.content p {
+  margin-top: 0;
+  margin-bottom: 1.35rem;
+  text-align: left !important;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+}
+
+.content p * {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+/* Headings */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: #202938;
+  font-weight: 700 !important;
+  text-align: left !important;
+  line-height: 1.3 !important;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.25rem) !important;
+}
+
+.content h2 {
+  font-size: clamp(1.5rem, 3.5vw, 1.85rem) !important;
+}
+
+.content h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+}
+
+.content h4,
+.content h5,
+.content h6 {
+  font-size: 1.15rem !important;
+}
+
+/* Bold text */
+.content strong,
+.content b {
+  font-weight: 700 !important;
+  color: #202938;
+}
+
+/* Lists */
+.content ul,
+.content ol {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.75rem;
+}
+
+.content ul {
+  list-style-type: disc;
+}
+
+.content ol {
+  list-style-type: decimal;
+}
+
+.content li {
+  margin-bottom: 0.55rem;
+  padding-left: 0.2rem;
+  text-align: left !important;
+}
+
+.content li p {
+  margin-bottom: 0.5rem;
+}
+
+/* Article images */
+.content img {
+  display: block;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 1.75rem auto;
+  object-fit: contain;
+}
+
+.content figure {
+  max-width: 100%;
+  margin: 1.75rem auto;
+  text-align: center;
+}
+
+.content figcaption {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Tables */
 .content table {
   display: block;
   width: max-content;
   min-width: 100%;
   max-width: 100%;
+  margin: 1.75rem 0;
   overflow-x: auto;
+  border-collapse: collapse;
   -webkit-overflow-scrolling: touch;
+}
+
+.content th,
+.content td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+.content th {
+  font-weight: 700;
+  background: #f3f4f6;
+}
+
+/* Links */
+.content a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Quotes and code */
+.content blockquote {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #2563eb;
+  background: #f8fafc;
 }
 
 .content pre {
   max-width: 100%;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-.content {
-  overflow-wrap: anywhere;
+.content code {
+  overflow-wrap: break-word;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .content {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .content p {
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+  }
+
+  .content h2 {
+    margin-top: 1.75rem;
+  }
+
+  .content h3 {
+    margin-top: 1.5rem;
+  }
+
+  .content img {
+    margin: 1.4rem auto;
+  }
 }
