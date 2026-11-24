@@ -1,12 +1,9 @@
 ---
-title: Matthew  Rudolph 
-meta_title: ""
-image: /images/authors/john-doe.jpg
-description: this is meta description
-social:
-  facebook: https://www.facebook.com/
-  x: https://www.x.com/
-  linkedin: https://www.linkedin.com/
+title: Matthew Rudolph
+meta_title: Matthew Rudolph
+image: /images/authors/matthew-rudolph.jpg
+description: Matthew Rudolph is an entrepreneur, business owner, and writer at InkGlobe, covering business finance, insurance, and software.
+social: {}
 ---
 
 I am Matthew Rudolph, an entrepreneur, business owner, and writer at InkGlobe. I run and manage small businesses, including a printing and custom production business supported by a dedicated delivery team. I also operate online businesses and understand the opportunities and challenges that come with building and managing businesses.
