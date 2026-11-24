@@ -14,102 +14,115 @@ const posts = await getSinglePage("posts");
 const { post } = Astro.props;
 const similarPosts = similerItems(post, posts, post.slug);
 const { Content } = await render(post);
-const { title, description, authors, categories, image, date, tags } =
-  post.data;
+
+const {
+  title,
+  description,
+  authors = [],
+  categories = [],
+  image,
+  date,
+  tags = [],
+} = post.data;
 ---
 
 <section class="section">
   <div class="container">
-    <article class="row justify-center">
-      <div class="md:col-10 text-center">
-        <h1 set:html={markdownify(title)} class="h2" />
-        <ul class="mt-4 flex flex-wrap items-center justify-center text-text">
-          <li class="mx-3">
-            {
-              allAuthors
-                .filter((author) =>
-                  authors
-                    .map((author: string) => slugify(author))
-                    .includes(slugify(author.data.title))
-                )
-                .map((author) => (
-                  <a
-                    href={`/authors/${slugify(author.id)}`}
-                    class="flex items-center hover:text-primary font-medium"
-                  >
-                    {author.data.image && (
-                      <Image
-                        src={author.data.image}
-                        alt={author.data.title}
-                        height={50}
-                        width={50}
-                        class="mr-2 h-6 w-6 rounded-full"
-                      />
-                    )}
-                    <span>{author.data.title}</span>
-                  </a>
-                ))
-            }
-          </li>
-          <li class="mx-3 flex items-center flex-wrap font-medium">
-            <BiCalendarEdit className="mr-1 h-5 w-5 text-gray-600" />
-            {dateFormat(date)}
-          </li>
-          <li class="mx-3 flex items-center flex-wrap">
-            <BiCategoryAlt className="mr-1 h-[18px] w-[18px] text-gray-600" />
+    <article>
+      <header class="mx-auto max-w-5xl text-center">
+        <h1
+          set:html={markdownify(title)}
+          class="mb-5 text-3xl font-extrabold leading-tight text-dark md:text-4xl lg:text-5xl"
+        />
 
-            <ul>
-              {
-                categories.map((category: string, i: number) => (
-                  <li class="inline-block">
-                    <a
-                      href={`/categories/${slugify(category)}`}
-                      class="mr-2 hover:text-primary font-medium"
-                    >
-                      {humanize(category)}
-                      {i !== post.data.categories.length - 1 && ","}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
+        {description && (
+          <p class="mx-auto mb-6 max-w-3xl text-lg leading-relaxed text-text">
+            {description}
+          </p>
+        )}
+
+        <ul class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-text">
+          {allAuthors
+            .filter((author) =>
+              authors
+                .map((name: string) => slugify(name))
+                .includes(slugify(author.data.title))
+            )
+            .map((author) => (
+              <li>
+                <a
+                  href={`/authors/${slugify(author.id)}`}
+                  class="flex items-center font-semibold hover:text-primary"
+                >
+                  {author.data.image && (
+                    <Image
+                      src={author.data.image}
+                      alt={author.data.title}
+                      height={50}
+                      width={50}
+                      class="mr-2 h-8 w-8 rounded-full"
+                    />
+                  )}
+                  <span>{author.data.title}</span>
+                </a>
+              </li>
+            ))}
+
+          <li class="flex items-center">
+            <BiCalendarEdit className="mr-2 h-5 w-5" />
+            <time datetime={date.toISOString()}>
+              {dateFormat(date)}
+            </time>
+          </li>
+
+          <li class="flex items-center">
+            <BiCategoryAlt className="mr-2 h-5 w-5" />
+            {categories.map((category: string, i: number) => (
+              <span>
+                <a
+                  href={`/categories/${slugify(category)}`}
+                  class="font-medium hover:text-primary"
+                >
+                  {humanize(category)}
+                </a>
+                {i !== categories.length - 1 && ", "}
+              </span>
+            ))}
           </li>
         </ul>
-      </div>
+      </header>
 
-      <div class="col-12 mt-8 mb-2">
-        {
-          image && (
-            <Image
-              src={image}
-              height={500}
-              width={1000}
-              alt={title}
-              class="rounded-lg"
-            />
-          )
-        }
-      </div>
+      {image && (
+        <div class="mx-auto mt-10 mb-12 max-w-5xl">
+          <Image
+            src={image}
+            height={600}
+            width={1200}
+            alt={title}
+            class="w-full rounded-lg object-cover"
+          />
+        </div>
+      )}
 
-      <div class="md:col-10">
-        <div class="content mb-16 text-left">
+      <div class="mx-auto max-w-4xl">
+        <div class="content mb-14 text-left">
           <Content />
         </div>
-        <div class="flex flex-wrap items-center justify-between">
-          <ul class="mr-4 mb-4 space-x-3">
-            {
-              tags.map((tag: string) => (
-                <li class="inline-block">
-                  <a
-                    href={`/tags/${slugify(tag)}`}
-                    class="block rounded-lg bg-light px-4 py-2 font-semibold text-dark text-sm hover:text-primary transition duration-300"
-                  >
-                    #{humanize(tag)}
-                  </a>
-                </li>
-              ))
-            }
+
+        <div class="flex flex-wrap items-center justify-between border-t border-border pt-6">
+          <ul class="mr-4 mb-4 flex flex-wrap gap-3">
+            {tags.map((tag: string) => (
+              <li>
+                <a
+                  href={`/tags/${slugify(tag)}`}
+                  class="block rounded-lg bg-light px-4 py-2 text-sm font-semibold text-dark transition duration-300 hover:text-primary"
+                >
+                  #{humanize(tag)}
+                </a>
+              </li>
+            ))}
           </ul>
+
           <Share
             className="social-share mb-4"
             title={title}
@@ -122,12 +135,11 @@ const { title, description, authors, categories, image, date, tags } =
   </div>
 </section>
 
-<!-- similar posts -->
 {
   similarPosts.length > 0 && (
     <section class="section pt-0">
       <div class="container">
-        <h2 class="mb-8 text-center h3">Similar Posts</h2>
+        <h2 class="mb-8 text-center h3">Related Guides</h2>
         <SimilarPosts posts={similarPosts.slice(0, 3)} />
       </div>
     </section>
