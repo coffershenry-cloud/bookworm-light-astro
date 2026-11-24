@@ -8,7 +8,6 @@ export interface ISocial {
   link: string;
 }
 
-// Map frontmatter keys to react-icons names used by DynamicIcon
 const iconMap: Record<string, string> = {
   facebook: "FaFacebook",
   x: "FaXTwitter",
@@ -19,7 +18,9 @@ const iconMap: Record<string, string> = {
 
 const normalize = (src: any): ISocial[] => {
   if (!src) return [];
+
   if (Array.isArray(src)) return src as ISocial[];
+
   if (typeof src === "object" && src !== null) {
     return Object.entries(src).map(([name, link]) => ({
       name,
@@ -29,21 +30,23 @@ const normalize = (src: any): ISocial[] => {
         `Fa${String(name).charAt(0).toUpperCase()}${String(name).slice(1)}`,
     }));
   }
+
   return [];
 };
 
 const items = normalize(source);
 ---
 
-<ul class={className}>
+<ul class={`${className ?? ""} flex flex-row flex-wrap justify-center items-center gap-6`}>
   {
     items.map((social: ISocial) => (
-      <li>
+      <li class="flex items-center justify-center">
         <a
           aria-label={social.name}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer nofollow"
+          class="inline-flex items-center justify-center"
         >
           <span class="sr-only">{social.name}</span>
           <DynamicIcon className="inline-block" icon={social.icon} />
