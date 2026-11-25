@@ -89,10 +89,10 @@ draft: false
   <div style="margin: 25px 0px; overflow-x: auto;">
     <table style="border-collapse: collapse; font-size: 14px; min-width: 650px; width: 100%;">
       <thead>
-        <tr style="background: rgb(23, 37, 84); color: white;">
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Feature</th>
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Personal Auto Insurance</th>
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Commercial Auto Insurance</th>
+        <tr style="background-color: #172554; color: #ffffff;">
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Feature</th>
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Personal Auto Insurance</th>
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Commercial Auto Insurance</th>
         </tr>
       </thead>
       <tbody>
@@ -332,10 +332,10 @@ draft: false
   <div style="margin: 25px 0px; overflow-x: auto;">
     <table style="border-collapse: collapse; font-size: 14px; min-width: 550px; width: 100%;">
       <thead>
-        <tr style="background: rgb(23, 37, 84); color: white;">
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Business or vehicle type</th>
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Published monthly average</th>
-          <th style="border: 1px solid rgb(219, 226, 234); padding: 13px; text-align: left;">Source</th>
+        <tr style="background-color: #172554; color: #ffffff;">
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Business or vehicle type</th>
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Published monthly average</th>
+          <th style="background-color: #172554; color: #ffffff; border: 1px solid #cbd5e1; padding: 13px; text-align: left; font-weight: 700;">Source</th>
         </tr>
       </thead>
       <tbody>
