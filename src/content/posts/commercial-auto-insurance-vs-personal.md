@@ -10,8 +10,6 @@ draft: false
 
   <p style="color: #888888; font-size: 13px; margin-bottom: 10px; text-align: center;">INSURANCE &nbsp; | &nbsp; BUSINESS PROTECTION &nbsp; | &nbsp; AUTO INSURANCE</p>
 
-  
-
   <p style="color: #596579; font-size: 18px;">
     Using your personal car to visit customers, transport equipment or make business deliveries may seem harmless. However, the type of insurance protecting your vehicle can become a serious issue if an accident happens while you are working .</p><p style="color: #596579; font-size: 18px; text-align: center;"><img alt="" height="469" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkN1IiosmF6Ktew3HqoPHmIGd6MCvxZB6TYAH7f3vFUMAo2CNcHtr2t0Cdu2W2AuZn6wnqh_8LrmY1zohmNhoDVODsR7T97EsFiNJdjb7_nCiCgzhMgUlIRjyPH3gap6I_jNgGAJIhaLiYqQzceac2pUKvymEP6JR1l6PXhMeIAu8QXdLUTZGMGHxpvDw/w640-h469/image.png" width="640" />&nbsp;</p>
 
@@ -326,18 +324,9 @@ draft: false
 
   <div style="background: rgb(248, 250, 252); border-radius: 8px; border: 1px solid rgb(226, 232, 240); margin: 24px 0px; padding: 20px;">
     <h3 style="color: #172554; margin-top: 0px;">Published insurer cost examples</h3>
-
-    <p>
-      <b>Progressive Commercial:</b> Its published 2025 averages for new commercial auto policies included approximately $276 per month for business auto and $260 per month for contractors. For-hire transport trucks averaged approximately $926 per month.
-    </p>
-
-    <p>
-      <b>The Hartford:</b> The insurer reports that its commercial auto customers pay an average of approximately $574 per month, or $6,884 annually.
-    </p>
-
-    <p style="color: #777777; font-size: 13px; margin-bottom: 0px;">
-      These are different insurers' customer figures, based on different portfolios and measurement periods. They should not be treated as directly comparable market averages or guaranteed quotes for your business.
-    </p>
+    <p><b>Progressive Commercial:</b> Its published 2025 averages for new commercial auto policies included approximately $276 per month for business auto and $260 per month for contractors. For-hire transport trucks averaged approximately $926 per month.</p>
+    <p><b>The Hartford:</b> The insurer reports that its commercial auto customers pay an average of approximately $574 per month, or $6,884 annually.</p>
+    <p style="color: #777777; font-size: 13px; margin-bottom: 0px;">These are different insurers' customer figures, based on different portfolios and measurement periods. They should not be treated as directly comparable market averages or guaranteed quotes for your business.</p>
   </div>
 
   <div style="margin: 25px 0px; overflow-x: auto;">
