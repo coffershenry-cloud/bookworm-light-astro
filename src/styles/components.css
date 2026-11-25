@@ -11,6 +11,7 @@
 }
 
 /* Paragraphs and text alignment */
+
 .content p {
   margin-top: 0;
   margin-bottom: 1.35rem;
@@ -25,6 +26,7 @@
 }
 
 /* Headings */
+
 .content h1,
 .content h2,
 .content h3,
@@ -58,6 +60,7 @@
 }
 
 /* Bold text */
+
 .content strong,
 .content b {
   font-weight: 700 !important;
@@ -65,6 +68,7 @@
 }
 
 /* Lists */
+
 .content ul,
 .content ol {
   margin-top: 1rem;
@@ -91,6 +95,7 @@
 }
 
 /* Article images */
+
 .content img {
   display: block;
   max-width: 100% !important;
@@ -113,6 +118,7 @@
 }
 
 /* Tables */
+
 .content table {
   display: block;
   width: max-content;
@@ -138,6 +144,7 @@
 }
 
 /* Links */
+
 .content a {
   color: #2563eb;
   text-decoration: underline;
@@ -149,6 +156,7 @@
 }
 
 /* Quotes and code */
+
 .content blockquote {
   margin: 1.75rem 0;
   padding: 1rem 1.25rem;
@@ -167,7 +175,24 @@
   overflow-wrap: break-word;
 }
 
+/*
+ * Global page alignment.
+ * Match category pages to the homepage's horizontal margins.
+ */
+
+.container,
+.inkglobe-wide {
+  box-sizing: border-box;
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(20px, 4vw, 52px) !important;
+  padding-right: clamp(20px, 4vw, 52px) !important;
+}
+
 /* Mobile adjustments */
+
 @media (max-width: 640px) {
   .content {
     font-size: 16px;
