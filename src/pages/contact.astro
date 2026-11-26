@@ -1,9 +1,9 @@
 ---
 import Base from "@/layouts/Base.astro";
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 
 const entry = await getEntry("contact", "-index");
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const { title, description, meta_title, image } = entry.data;
 ---
 
