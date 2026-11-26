@@ -1,53 +1,127 @@
-<h1>Privacy Policy</h1>
+---
+title: "Privacy Policy"
+meta_title: "Privacy Policy | InkGlobe"
+description: "Read how InkGlobe collects, uses and protects visitor information."
+draft: false
+---
 
-<p><strong>Last updated: November 26, 2026</strong></p>
+# Privacy Policy
 
-<p>InkGlobe respects your privacy. This Privacy Policy explains what information may be collected when you visit <a href="https://www.inkglobe.com">www.inkglobe.com</a>, how that information is used, and the choices available to you.</p>
+InkGlobe respects the privacy of visitors to this website. This Privacy Policy explains the types of information that may be collected when you visit InkGlobe, how that information may be used and the choices available to you.
 
-<h2>Information We Collect</h2>
-<p>We may collect information you voluntarily provide, such as your name and email address when you contact us.</p>
-<p>We may also automatically collect technical information, including your IP address, browser type, device information, pages visited, referring websites, and general usage information.</p>
+By using this website, you acknowledge that you have read this policy.
 
-<h2>How We Use Information</h2>
-<ul>
-<li>To operate and maintain our website.</li>
-<li>To respond to enquiries and messages.</li>
-<li>To understand how visitors use our content.</li>
-<li>To improve website performance and user experience.</li>
-<li>To monitor website security and prevent misuse.</li>
-<li>To support advertising and affiliate marketing activities.</li>
-</ul>
+## Information We May Collect
 
-<h2>Cookies and Similar Technologies</h2>
-<p>InkGlobe and certain third-party services may use cookies, pixels, and similar technologies to understand website traffic, measure advertising performance, remember preferences, and support affiliate tracking.</p>
-<p>You can manage or disable cookies through your browser settings. Some website features may not function as intended if cookies are disabled.</p>
+Depending on how you use the website, information may be collected in the following ways.
 
-<h2>Advertising and Third-Party Services</h2>
-<p>InkGlobe may use third-party advertising, analytics, and affiliate marketing services. These providers may use cookies or similar technologies to collect information about your visits to this and other websites. Their collection and use of information are governed by their own privacy policies.</p>
+### Information You Provide
 
-<h2>Affiliate Links</h2>
-<p>Some links on InkGlobe are affiliate links. When you click these links, third-party partners may use tracking technologies to identify referrals and attribute purchases or other actions. This may allow us to earn a commission at no additional cost to you.</p>
+If you contact us or submit information through a form, we may receive information such as your name, email address and the contents of your message.
 
-<h2>Sharing of Information</h2>
-<p>We do not sell visitors' personal information. We may share limited information with service providers that help operate our website, provide analytics, deliver advertising, or manage affiliate referrals. Information may also be disclosed where required by law.</p>
+Please avoid sending sensitive personal or financial information unless it is necessary for your enquiry.
 
-<h2>Data Security</h2>
-<p>We take reasonable measures to protect information handled through our website. However, no method of transmitting or storing information online can be guaranteed to be completely secure.</p>
+### Information Collected Automatically
 
-<h2>External Links</h2>
-<p>Our website may contain links to external websites. We are not responsible for their privacy practices, content, or security.</p>
+When you visit InkGlobe, certain technical information may be collected automatically. This may include:
 
-<h2>Children's Privacy</h2>
-<p>InkGlobe is not intended to knowingly collect personal information from children under the age of 13. If we become aware that such information has been submitted, we will take reasonable steps to address it.</p>
+- Internet Protocol (IP) address
+- Browser type and version
+- Device information
+- Operating system
+- Pages visited
+- Date and time of visits
+- Referring websites
+- General website usage information
 
-<h2>Your Privacy Choices</h2>
-<p>Depending on your location and applicable law, you may have rights to request access to, correction of, or deletion of personal information we hold about you.</p>
+This information may be used for website administration, security, analytics and performance improvement.
 
-<h2>Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time. Any changes will be published on this page with an updated revision date.</p>
+## Cookies and Similar Technologies
 
-<h2>Contact Us</h2>
-<p>If you have questions about this Privacy Policy or how information is handled, please contact InkGlobe through our Contact page.</p>
+InkGlobe and certain third-party services may use cookies or similar technologies.
 
-<p><strong>InkGlobe</strong><br>
-<a href="https://www.inkglobe.com">www.inkglobe.com</a></p>
+Cookies are small files stored on your device that can help websites remember information, understand visitor activity and support website functionality.
+
+You can manage or disable cookies through your browser settings. Disabling certain cookies may affect how some websites or services function.
+
+## Analytics
+
+We may use analytics services to understand how visitors use InkGlobe. These services may collect information about website visits, traffic sources, pages viewed and general visitor activity.
+
+The information helps us understand website performance and improve our content.
+
+Third-party analytics providers may process information according to their own privacy policies.
+
+## Advertising
+
+InkGlobe may display advertisements provided by third-party advertising companies.
+
+These companies may use cookies or similar technologies to display advertisements, measure advertising performance or understand interactions with advertisements.
+
+The information collected and the options available to visitors depend on the relevant advertising provider and its policies.
+
+## Affiliate Links
+
+Some pages on InkGlobe contain affiliate links. When visitors follow these links, third-party companies or affiliate networks may use cookies or other tracking technologies to record referrals and qualifying actions.
+
+InkGlobe may receive a commission or referral fee when a qualifying action occurs.
+
+For more information, please read our Affiliate Disclosure.
+
+## Third-Party Websites and Services
+
+Our website may contain links to external websites, products and services.
+
+We do not control the privacy practices, content or security of those external websites. Visiting another website or submitting information to a third-party provider is subject to that provider's own privacy policy and terms.
+
+We encourage visitors to review those policies before sharing personal information.
+
+## How Information May Be Used
+
+Information collected through or in connection with InkGlobe may be used to:
+
+- Operate and maintain the website
+- Respond to enquiries and messages
+- Understand website traffic and visitor activity
+- Improve website content and functionality
+- Monitor and protect website security
+- Measure advertising and affiliate referrals
+- Meet applicable legal obligations
+
+We do not state that every category of information is collected in every visit. The information processed depends on the services and features in use.
+
+## Data Security
+
+We take reasonable steps to protect information handled through the website.
+
+However, no method of transmitting or storing information online can be guaranteed to be completely secure. Visitors should exercise care when sharing personal information online.
+
+## Data Retention
+
+Information may be retained for as long as reasonably necessary for the purpose for which it was collected, including responding to enquiries, maintaining website operations, meeting legal obligations and resolving disputes.
+
+Retention periods may vary depending on the type of information and the services involved.
+
+## Your Privacy Choices
+
+Depending on your location and applicable law, you may have rights concerning your personal information. These may include requesting access, correction or deletion of certain information, or objecting to particular forms of processing.
+
+You may also manage cookies through your browser settings.
+
+To make a privacy-related enquiry, please use the Contact page on InkGlobe.
+
+## Children's Privacy
+
+InkGlobe is not intended to knowingly collect personal information from children in violation of applicable law.
+
+If you believe a child has provided personal information through this website, please contact us so that the matter can be reviewed.
+
+## Changes to This Privacy Policy
+
+We may update this Privacy Policy when our website, services or legal requirements change.
+
+Any updated version will be published on this page. Visitors should review this page periodically.
+
+## Contact
+
+For questions about this Privacy Policy or the handling of information associated with InkGlobe, please use the Contact page on the website.
