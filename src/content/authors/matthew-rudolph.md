@@ -1,8 +1,9 @@
+
 ---
 title: Matthew Rudolph
-meta_title: Matthew Rudolph
+meta_title: Matthew Rudolph | InkGlobe
 image: /images/authors/matthew-rudolph.jpg
-description: Matthew Rudolph is an entrepreneur, business owner, and writer at InkGlobe, covering business finance, insurance, and software.
+description: Matthew Rudolph writes about small business finance, insurance and software, drawing on his experience running and managing small businesses.
 social: {}
 ---
 
