@@ -1,3 +1,4 @@
+
 {
   "site": {
     "title": "InkGlobe | Finance, Insurance and Software",
@@ -16,7 +17,7 @@
   "metadata": {
     "meta_author": "InkGlobe Editorial Team",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Practical guides, comparisons and insights on finance, insurance and software."
+    "meta_description": "Find practical information on small business finance, insurance coverage and software, including costs, comparisons and business tools."
   },
   "google_tag_manager": {
     "enable": false,
