@@ -1,0 +1,134 @@
+media:
+  - name: images
+    label: Images
+    input: public/images
+    output: /images
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, avif, gif, svg]
+    rename: safe
+
+content:
+  - name: posts
+    label: Articles
+    type: collection
+    path: src/content/posts
+    filename:
+      template: "{primary}.md"
+      field: create
+    view:
+      fields: [title, date, categories, draft]
+      primary: title
+      sort: date
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Article title
+        type: string
+        required: true
+      - name: meta_title
+        label: SEO title
+        type: string
+      - name: description
+        label: Meta description
+        type: text
+      - name: date
+        label: Publication date
+        type: date
+      - name: image
+        label: Featured image
+        type: image
+        options:
+          media: images
+          path: posts
+      - name: categories
+        label: Categories
+        type: select
+        list: true
+        options:
+          values:
+            - name: Finance
+              label: Finance
+            - name: Insurance
+              label: Insurance
+            - name: Software
+              label: Software
+      - name: authors
+        label: Authors
+        type: reference
+        options:
+          collection: authors
+          multiple: true
+          value: "{primary}"
+          label: "{primary}"
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: draft
+        label: Draft
+        type: boolean
+      - name: body
+        label: Article HTML
+        type: rich-text
+        options:
+          format: html
+          switcher: true
+          media: images
+          path: posts
+          rename: safe
+
+  - name: authors
+    label: Authors
+    type: collection
+    path: src/content/authors
+    filename: "{primary}.md"
+    view:
+      fields: [title, description]
+      primary: title
+    fields:
+      - name: title
+        label: Author name
+        type: string
+        required: true
+      - name: meta_title
+        label: SEO title
+        type: string
+      - name: image
+        label: Author image
+        type: image
+        options:
+          media: images
+          path: authors
+      - name: description
+        label: Author description
+        type: text
+      - name: social
+        label: Social links
+        type: object
+        fields:
+          - name: facebook
+            type: string
+          - name: x
+            type: string
+          - name: instagram
+            type: string
+          - name: linkedin
+            type: string
+          - name: github
+            type: string
+          - name: website
+            type: string
+          - name: youtube
+            type: string
+
+settings:
+  content:
+    merge: true
+  commit:
+    templates:
+      create: "Create {path} via Pages CMS"
+      update: "Update {path} via Pages CMS"
+      delete: "Delete {path} via Pages CMS"
+      rename: "Rename {oldPath} to {newPath} via Pages CMS"
