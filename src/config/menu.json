@@ -10,6 +10,8 @@
   "footer": [
     {"name": "About", "url": "/about"},
     {"name": "Contact", "url": "/contact"},
-    {"name": "Privacy Policy", "url": "/privacy-policy"}
+    {"name": "Privacy Policy", "url": "/privacy-policy"},
+    {"name": "Affiliate Disclosure", "url": "/affiliate-disclosure"},
+    {"name": "Editorial Policy", "url": "/editorial-policy"}
   ]
 }
