@@ -3,6 +3,11 @@ import Base from "@/layouts/Base.astro";
 import { getEntry, render } from "astro:content";
 
 const entry = await getEntry("contact", "-index");
+
+if (!entry) {
+  throw new Error("Contact page content was not found.");
+}
+
 const { Content } = await render(entry);
 const { title, description, meta_title, image } = entry.data;
 ---

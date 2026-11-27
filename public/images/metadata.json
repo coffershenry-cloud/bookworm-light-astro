@@ -1,0 +1,12 @@
+{
+  "title": "InkGlobe",
+  "remainingCapacity": "19921",
+  "totalItems": "79",
+  "totalItemsAccuracy": "EXACT",
+  "timeInfo": {
+    "startMs": "1464961901000",
+    "endMs": "1795424339000",
+    "creationMs": "1787859016000",
+    "newestOperationTimeMs": "1795424339929"
+  }
+}
